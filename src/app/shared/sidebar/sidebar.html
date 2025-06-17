@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <nav>
+    <button (click)="goTo('/products')">📦 Products</button>
+    <button (click)="goTo('/customers')">👥 Customers</button>
+    <button (click)="goTo('/add-customer')">➕ Add Customer</button>
+    <button *ngIf="isAdmin" (click)="goTo('/add-product')">➕ Add Product</button>
+    <button (click)="goTo('/add-transaction')">💰 Make Sale</button>
+    <button *ngIf="isAdmin" (click)="goTo('/reports')">📊 Reports</button>
+    <button (click)="logout()">🚪 Logout</button>
+  </nav>
+
+</div>

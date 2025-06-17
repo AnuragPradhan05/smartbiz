@@ -1,0 +1,159 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.2s ease;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.features li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.features li::before {
+  content: \"✔️\";
+  position: absolute;
+  left: 0;
+  color: #90cdf4;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1a202c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #63b3ed;
+}
+
+.login-btn {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #3182ce;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .features {
+    font-size: 1rem;
+  }
+}
+/* Features Hover Effect */
+.features li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.features li:hover {
+  transform: translateX(8px);
+  color: #fbd38d; /* light yellow hover */
+}
+
+/* Login Button Hover (already added but now improved) */
+.login-btn:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+  transform: scale(1.05);
+}
+
+/* Logo Hover (already exists, now smoother) */
+.logo:hover {
+  color: #63b3ed;
+  transform: scale(1.04);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.overlay {
+  animation: fadeIn 1.2s ease, pulse 8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,0 +1,25 @@
+<div class="admin-dashboard">
+  <app-sidebar></app-sidebar>
+
+  <div class="main-content">
+    <app-navbar></app-navbar>
+
+    <div class="dashboard-body">
+      <h2>Welcome, Admin 👋</h2>
+
+      <div class="overview-cards">
+        <div class="card">Customers: <strong>{{ totalCustomers }}</strong></div>
+        <div class="card">Products: <strong>{{ totalProducts }}</strong></div>
+        <div class="card">Total Sales: <strong>₹{{ totalSales }}</strong></div>
+        <div class="card">Outstanding: <strong>₹{{ totalDue }}</strong></div>
+      </div>
+
+      <div class="quick-actions">
+        <button (click)="goToAddCustomer()">➕ Add Customer</button>
+        <button (click)="goToAddProduct()">➕ Add Product</button>
+        <button (click)="goToTransactions()">📜 View Transactions</button>
+        <button (click)="goToReports()">📊 View Reports</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.navbar {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.6s ease-out;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Slide-in animation from top */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

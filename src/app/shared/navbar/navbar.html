@@ -1,0 +1,12 @@
+<div class="navbar">
+  <span>
+    📊 
+    {{
+      userRole === 'Admin'
+        ? 'Admin Dashboard'
+        : userRole === 'Employee'
+        ? 'Employee Dashboard'
+        : 'SmartBiz Dashboard'
+    }}
+  </span>
+</div>

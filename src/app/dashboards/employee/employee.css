@@ -1,0 +1,55 @@
+.employee-dashboard {
+  display: flex;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.dashboard-body h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Buttons */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.quick-actions button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

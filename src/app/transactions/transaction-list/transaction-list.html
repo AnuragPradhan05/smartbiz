@@ -1,0 +1,29 @@
+<div class="transaction-list">
+  <div class="close-button-wrapper">
+    <app-close-button></app-close-button>
+  </div>
+  <h2>📜 Transaction History</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Total (₹)</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tx of transactions">
+        <td>{{ tx.id }}</td>
+        <td>{{ tx.customerName }}</td>
+        <td>{{ tx.productName }}</td>
+        <td>{{ tx.quantity }}</td>
+        <td>{{ tx.total }}</td>
+        <td>{{ tx.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

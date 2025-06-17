@@ -1,0 +1,30 @@
+<div class="product-list">
+  <div class="close-button-wrapper">
+    <app-close-button></app-close-button>
+  </div>
+  <h2>📦 Product List</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Price (₹)</th>
+        <th>Stock</th>
+        <th *ngIf="isAdmin">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.stock }}</td>
+        <td *ngIf="isAdmin">
+          <button class="edit" (click)="editProduct(product.id)">Edit</button>
+          <button class="delete" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
